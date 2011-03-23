@@ -59,23 +59,22 @@ la **misma** propiedad llamada `value`.
 > a `Function.prototype` pero no a `Foo.prototype`;
 > por ende, `method` no estará en la cadena de prototipos.
 
-### Property Lookup
+### Búsqueda de Propiedades
 
-When accessing the properties of an object, JavaScript will traverse the
-prototype chain **upwards** until it finds a property with the requested name.
+Cuando se accede a una propiedad de un objeto, JavaScript recorre la cande de prototipos
+hacia **arriba** hasta que encuentr una propiedad con el nombre solicitado.
 
-When it reaches the top of the chain - namely `Object.prototype` - and still
-hasn't found the specified property, it will return the value
-[undefined](#core.undefined) instead.
+Cuando llega a la cima de la cadena - normalmente `Object.prototype` - y aun no
+encuentra un metodo con el nombre especificado, retorna el valor [undefined](#core.undefined).
 
-### The Prototype Property
+### La Propiedad Prototipo
 
-While the prototype property is used by the language to build the prototype
-chains, it is still possible to assign **any** given value to it. Although 
-primitives will simply get ignored when assigned as a prototype.
+Aunque la propiedad Prototipo es usada por el lenguaje para construir la cadena de prototipos,
+es posible asignarle **cualquier** valor. Aunque los tipos primitivos 
+simplemente seran ignorados cuando lo haga de esta forma.
 
     function Foo() {}
-    Foo.prototype = 1; // no effect
+    Foo.prototype = 1; // no tiene efecto
 
 Assigning objects, as shown in the example above, will work, and allows for dynamic
 creation of prototype chains.
@@ -112,5 +111,4 @@ unless it is for the sake of compatibility with newer JavaScript features.
 
 [1]: http://en.wikipedia.org/wiki/Monkey_patch
 [2]: http://prototypejs.org/
-[3]: https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/forEach
-
+[3]: https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/for
