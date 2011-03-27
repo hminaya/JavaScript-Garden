@@ -76,6 +76,7 @@ simplemente seran ignorados cuando lo haga de esta forma.
     function Foo() {}
     Foo.prototype = 1; // no tiene efecto
 
+Asignar objetos, como se muestra en el ejemplo anterior, funciona, y permite
 Assigning objects, as shown in the example above, will work, and allows for dynamic
 creation of prototype chains.
 
@@ -111,4 +112,5 @@ unless it is for the sake of compatibility with newer JavaScript features.
 
 [1]: http://en.wikipedia.org/wiki/Monkey_patch
 [2]: http://prototypejs.org/
-[3]: https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/for
+[3]: https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/forEach
+
